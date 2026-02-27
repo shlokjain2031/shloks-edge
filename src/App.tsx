@@ -104,7 +104,7 @@ const blogs: BlogItem[] = [
     date: 'Oct 2025',
     description:
       'Tried to figure out how AirBnb evolved their tech over time as their needs changed and how each phase worked',
-    href: 'https://x.com/BlokeJain/status/1978187294872920364?s=20',
+    href: 'https://x.com/BlokeJain/status/1978187097363173835?s=20',
   }
 ]
 
