@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useRef, useState } from 'react'
+import InkCursor from './InkCursor'
 
 type WorkItem = {
   title: string
@@ -146,7 +147,9 @@ function App() {
   }
 
   return (
-    <main className="page">
+    <>
+      <InkCursor />
+      <main className="page">
       <section className="hero">
         <h1>Hi, I&apos;m Shlok.</h1>
         <p> I enjoy building interesting products and scalable systems</p>
@@ -183,9 +186,9 @@ function App() {
             </div>
           </span>
         </div>
-      </section>
+        </section>
 
-      <section>
+        <section>
         <h2>Projects</h2>
         <div className="list">
           {projects.map((project) => (
@@ -217,9 +220,9 @@ function App() {
             </a>
           ))}
         </div>
-      </section>
+        </section>
 
-      <section>
+        <section>
         <h2>Work</h2>
         <div className="list">
           {work.map((item) => {
@@ -262,9 +265,9 @@ function App() {
             )
           })}
         </div>
-      </section>
+        </section>
 
-      <section id="blog">
+        <section id="blog">
         <h2>Blog</h2>
         <div className="list">
           {blogs.map((blog) => (
@@ -282,8 +285,9 @@ function App() {
             </a>
           ))}
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   )
 }
 
