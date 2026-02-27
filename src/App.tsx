@@ -22,6 +22,7 @@ type BlogItem = {
   date: string
   description: string
   href: string
+  id: string
 }
 
 const emailAddress = 'jainshlok20@gmail.com'
@@ -84,6 +85,7 @@ const blogs: BlogItem[] = [
     description:
       'Twitter thread on how I distinguished real opens from false positives',
     href: 'https://x.com/BlokeJain/status/2026969942181200225?s=20',
+    id: 'open-counts',
   },
   {
     title: <p>Estimating PM<sub>2.5</sub> at a 30m resolution using LightGBM</p>,
@@ -91,6 +93,7 @@ const blogs: BlogItem[] = [
     description:
       'Technical document on how I built the LightGBM model to estimate AQI at 30m resolution',
     href: 'https://gist.github.com/shlokjain2031/f37a5af9108d0ffd40f6e3d0e25c4b27',
+    id: 'aqi-lightgbm',
   },
   {
     title: 'Reasons behind trophy counts mismatched between users in Clash Royale',
@@ -98,6 +101,7 @@ const blogs: BlogItem[] = [
     description:
       'Dug down the rabbit hole on how Clash Royale updates trophy count data after a match',
     href: 'https://x.com/BlokeJain/status/1981744719727096265?s=20',
+    id: 'clash-trophies',
   },
   {
     title: 'AirBnB’s internal key-value store, Mussel',
@@ -105,6 +109,7 @@ const blogs: BlogItem[] = [
     description:
       'Tried to figure out how AirBnb evolved their tech over time as their needs changed and how each phase worked',
     href: 'https://x.com/BlokeJain/status/1978187097363173835?s=20',
+    id: 'airbnb-mussel',
   }
 ]
 
@@ -264,7 +269,7 @@ function App() {
         <div className="list">
           {blogs.map((blog) => (
             <a
-              key={blog.title}
+              key={blog.id}
               className="card blog-card"
               href={blog.href}
               target="_blank"
