@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import InkCursor from './InkCursor'
 
 type WorkItem = {
   title: string
@@ -141,8 +142,10 @@ function App() {
   }
 
   return (
-    <main className="page">
-      <section className="hero">
+    <>
+      <InkCursor />
+      <main className="page">
+        <section className="hero">
         <h1>Hi, I&apos;m Shlok.</h1>
         <p> I like identifying pain points and building scalable systems for them, taking full e2e ownership</p>
         <p> My tech stack is whatever best solves the problem </p>
@@ -178,11 +181,11 @@ function App() {
             </div>
           </span>
         </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>Projects</h2>
-        <div className="list">
+        <section>
+          <h2>Projects</h2>
+          <div className="list">
           {projects.map((project) => (
             <a
               key={project.name}
@@ -211,12 +214,12 @@ function App() {
               )}
             </a>
           ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section>
-        <h2>Work</h2>
-        <div className="list">
+        <section>
+          <h2>Work</h2>
+          <div className="list">
           {work.map((item) => {
             const content = (
               <>
@@ -256,12 +259,12 @@ function App() {
               </article>
             )
           })}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section id="blog">
-        <h2>Blog</h2>
-        <div className="list">
+        <section id="blog">
+          <h2>Blog</h2>
+          <div className="list">
           {blogs.map((blog) => (
             <a
               key={blog.title}
@@ -276,9 +279,10 @@ function App() {
               <p>{blog.description}</p>
             </a>
           ))}
-        </div>
-      </section>
-    </main>
+          </div>
+        </section>
+      </main>
+    </>
   )
 }
 
