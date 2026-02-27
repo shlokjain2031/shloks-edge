@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  color-scheme: light;
+  font-family: 'DM Sans', 'Product Sans', 'Google Sans', Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #2f2a24;
+  background: #f7f6f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #2f2a24;
+  background: #f7f6f5;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 28px 76px;
+}
+
+.hero h1 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+
+.links {
+  display: flex;
+  gap: 18px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.email-link-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.email-link-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 26px;
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.email-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translate(-50%, 6px);
+  background: #f5d3bf;
+  padding: 10px 14px;
+  border-radius: 16px;
+  box-shadow: 0 14px 38px rgba(26, 19, 11, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 200ms ease, transform 200ms ease;
+  min-width: 220px;
+  justify-content: center;
+}
+
+.email-link-wrapper:hover .email-tooltip,
+.email-link-wrapper:focus-within .email-tooltip,
+.email-tooltip:hover {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.email-address {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #5c3713;
+}
+
+.copy-icon {
+  border: none;
+  background: transparent;
+  color: #5c3713;
+  padding: 4px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.copy-icon:hover,
+.copy-icon:focus-visible {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.copy-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.copy-status {
+  font-size: 0.78rem;
+  color: #5c3713;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.copy-status.visible {
+  opacity: 1;
+}
+
+.links a {
+  color: #4b5563;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 120ms ease;
+}
+
+.links a:hover {
+  border-color: #6b7280;
+}
+
+section {
+  margin-top: 54px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 0 0 26px;
+  color: #2a2520;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 0 0 4px;
+  color: #23201c;
+}
+
+.list {
+  display: grid;
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 24px;
+  padding: 22px 28px 22px 34px;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: background 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  right: -72px;
+  bottom: -72px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(126, 230, 191, 0.32) 0%, rgba(126, 230, 191, 0) 65%);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.card:hover,
+.card:focus-visible {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 38px rgba(20, 15, 12, 0.12);
+  transform: translateY(-2px);
+}
+
+.card:hover::after,
+.card:focus-visible::after {
+  opacity: 1;
+}
+
+.project-card,
+.work-card {
+  display: block;
+}
+
+.blog-card {
+  padding-left: 34px;
+  padding-right: 28px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: #efe5d4;
+  color: #5f4a2f;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.muted {
+  color: #6f665b;
+  margin-bottom: 8px !important;
+  font-size: 0.95rem;
+}
+
+ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+  font-size: 0.97rem;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 28px 18px 52px;
+  }
+
+  .hero h1 {
+    font-size: 1.55rem;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+  }
+
+  h3 {
+    font-size: 1.02rem;
+  }
+}
