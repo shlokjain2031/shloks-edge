@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react'
-import InkCursor from './InkCursor'
 
 type WorkItem = {
   title: string
@@ -57,7 +56,7 @@ const projects: ProjectItem[] = [
     period: 'Dec 2025 — Jan 2026',
     href: 'https://pollu-two.vercel.app',
     description:
-      'Built and trained a boosting model for hourly AQI estimation at 30m resolution and deployed it behind a distributed Go backend as a public API. Sub 200ms p95 latency.',
+      'Built and trained a boosting model for hourly AQI estimation at 30m resolution and deployed it behind a distributed Go backend as a public API.  <200ms p95 latency.',
     tech: ['Go', 'Python', 'JS', 'Redis', 'DuckDB'],
   },
   {
@@ -87,14 +86,14 @@ const blogs: BlogItem[] = [
     href: 'https://x.com/BlokeJain/status/2026969942181200225?s=20',
   },
   {
-    title: 'How I built a real-time AQI estimation model',
+    title: <p>Estimating PM<sub>2.5</sub> at a 30m resolution using LightGBM</p>,
     date: 'Jan 2026',
     description:
       'Technical document on how I built the LightGBM model to estimate AQI at 30m resolution',
     href: 'https://gist.github.com/shlokjain2031/f37a5af9108d0ffd40f6e3d0e25c4b27',
   },
   {
-    title: 'Trophy counts mismatched between users in Clash Royale',
+    title: 'Reasons behind trophy counts mismatched between users in Clash Royale',
     date: 'Oct 2025',
     description:
       'Dug down the rabbit hole on how Clash Royale updates trophy count data after a match',
@@ -142,15 +141,13 @@ function App() {
   }
 
   return (
-    <>
-      <InkCursor />
-      <main className="page">
-        <section className="hero">
+    <main className="page">
+      <section className="hero">
         <h1>Hi, I&apos;m Shlok.</h1>
-        <p> I like identifying pain points and building scalable systems for them, taking full e2e ownership</p>
+        <p> I enjoy building interesting products and scalable systems</p>
         <p> My tech stack is whatever best solves the problem </p>
         <p>
-          I&apos;m an undergraduate at BITS Pilani, majoring in Econ and CS
+          I&apos;m an undergraduate at BITS Pilani, majoring in Econ + CS
         </p>
         <div className="links" aria-label="Social links">
           <a href="https://github.com/shlokjain2031" target="_blank" rel="noreferrer">
@@ -181,11 +178,11 @@ function App() {
             </div>
           </span>
         </div>
-        </section>
+      </section>
 
-        <section>
-          <h2>Projects</h2>
-          <div className="list">
+      <section>
+        <h2>Projects</h2>
+        <div className="list">
           {projects.map((project) => (
             <a
               key={project.name}
@@ -214,12 +211,12 @@ function App() {
               )}
             </a>
           ))}
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <h2>Work</h2>
-          <div className="list">
+      <section>
+        <h2>Work</h2>
+        <div className="list">
           {work.map((item) => {
             const content = (
               <>
@@ -259,12 +256,12 @@ function App() {
               </article>
             )
           })}
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="blog">
-          <h2>Blog</h2>
-          <div className="list">
+      <section id="blog">
+        <h2>Blog</h2>
+        <div className="list">
           {blogs.map((blog) => (
             <a
               key={blog.title}
@@ -279,10 +276,9 @@ function App() {
               <p>{blog.description}</p>
             </a>
           ))}
-          </div>
-        </section>
-      </main>
-    </>
+        </div>
+      </section>
+    </main>
   )
 }
 
