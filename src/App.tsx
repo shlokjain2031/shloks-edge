@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 
 type WorkItem = {
   title: string
@@ -18,7 +18,7 @@ type ProjectItem = {
 }
 
 type BlogItem = {
-  title: string
+  title: ReactNode
   date: string
   description: string
   href: string
