@@ -152,11 +152,13 @@ function App() {
       <main className="page">
       <section className="hero">
         <h1>Hi, I&apos;m Shlok.</h1>
-        <p> I enjoy building interesting products and scalable systems</p>
-        <p> My tech stack is whatever best solves the problem </p>
-        <p>
-          I&apos;m an undergraduate at BITS Pilani, majoring in Econ + CS
-        </p>
+        <blockquote className="hero-quote">
+          <p className="hero-quote-text">&ldquo;I solve problems&rdquo;</p>
+          <footer className="hero-quote-meta">
+            <span>- Mr. Winston Wolfe</span>
+            <span>(Pulp Fiction, 1994)</span>
+          </footer>
+        </blockquote>
         <div className="links" aria-label="Social links">
           <a href="https://github.com/shlokjain2031" target="_blank" rel="noreferrer">
             GitHub

@@ -37,6 +37,33 @@ body {
   margin: 0 0 10px;
 }
 
+.hero-quote {
+  margin: 14px 0 2px;
+  padding: 4px 0;
+}
+
+.hero-quote-text {
+  margin: 0;
+  font-size: 1.62rem;
+  line-height: 1.45;
+  font-style: italic;
+  color: #2d2823;
+}
+
+.hero-quote-meta {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1px;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: #2f2a24;
+  opacity: 0.68;
+}
+
 .links {
   display: flex;
   gap: 18px;
@@ -145,6 +172,10 @@ body {
 
 section {
   margin-top: 54px;
+}
+
+.hero + section {
+  margin-top: 30px;
 }
 
 h2 {
