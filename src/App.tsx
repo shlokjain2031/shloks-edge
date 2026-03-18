@@ -167,6 +167,9 @@ function App() {
             LinkedIn
           </a>
           <a href="https://x.com/blokejain/">Twitter</a>
+          <a href="/Shlok_Jain_CV.pdf" target="_blank" rel="noreferrer">
+            CV
+          </a>
           <span className="email-link-wrapper">
             <a href={`mailto:${emailAddress}`} className="email-link">
               Email
