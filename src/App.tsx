@@ -4,17 +4,9 @@ import InkCursor from './InkCursor'
 type WorkItem = {
   title: string
   period: string
-  description: string
+  description?: string
   href?: string
   tech?: string[]
-}
-
-type ProjectItem = {
-  name: string
-  period: string
-  description: string
-  href: string
-  tech: string[]
   highlights?: string[]
 }
 
@@ -30,6 +22,22 @@ const emailAddress = 'jainshlok20@gmail.com'
 
 const work: WorkItem[] = [
   {
+    title: 'Engineering & Operations @ Soma Insurance (Accel backed)',
+    period: "Mar '26 — Present",
+    description:
+      'I own the infra the agents run on (~500k req/day), and the browser automation that sped up getting policy quotes back reliably from 1 day to 30 min. Also did sales.',
+    href: 'https://www.somainsure.com/',
+    tech: ['Python', 'TypeScript', 'Supabase'],
+  },
+  {
+    title: 'Pollu',
+    period: 'Dec 2025 — Jan 2026',
+    href: 'https://pollu-two.vercel.app',
+    description:
+      'Built and trained a boosting model for hourly AQI estimation at 30m resolution and deployed it behind a distributed Go backend as a public API.  <200ms p95 latency.',
+    tech: ['Go', 'Python', 'JS', 'Redis', 'DuckDB'],
+  },
+  {
     title: 'Open-Source Contributor @ HPX (Parallel C++ Runtime)',
     period: 'Jul 2025 — Present',
     description:
@@ -38,39 +46,7 @@ const work: WorkItem[] = [
     href: 'https://tinyurl.com/bdz6urp6',
   },
   {
-    title: 'Competitive Programmer, Coding Club',
-    period: 'Feb 2025 — Present',
-    description:
-      'Codeforces peak 1554 | AtCoder peak 1104',
-    href: 'https://codeforces.com/profile/dungeon_master_3120',
-  },
-  {
-    title: 'Teaching Assistant, Computer Programming',
-    period: 'Jan 2026 — Present',
-    description:
-      'Conducting labs, mentoring students, and supporting assessments for 600+ students.',
-  },
-]
-
-const projects: ProjectItem[] = [
-  {
-    name: 'Pollu',
-    period: 'Dec 2025 — Jan 2026',
-    href: 'https://pollu-two.vercel.app',
-    description:
-      'Built and trained a boosting model for hourly AQI estimation at 30m resolution and deployed it behind a distributed Go backend as a public API.  <200ms p95 latency.',
-    tech: ['Go', 'Python', 'JS', 'Redis', 'DuckDB'],
-  },
-  {
-    name: 'Email Tracker Extension',
-    period: 'Feb 2026',
-    href: 'https://github.com/shlokjain2031/email-tracker-extension/',
-    description:
-      'Built a self-hosted email tracking system over the weekend to analyze open rates and engagement for cold outreach campaigns.',
-    tech: ['TypeScript', 'Node.js', 'Next.js'],
-  },
-  {
-    name: 'Kaze',
+    title: 'Kaze',
     period: 'May 2021 — Jun 2021',
     href: 'https://github.com/shlokjain2031/kaze',
     description:
@@ -194,40 +170,6 @@ function App() {
         </section>
 
         <section>
-        <h2>Projects</h2>
-        <div className="list">
-          {projects.map((project) => (
-            <a
-              key={project.name}
-              className="card project-card"
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Open project ${project.name}`}
-            >
-              <h3>{project.name}</h3>
-              <p className="muted">{project.period}</p>
-              <p>{project.description}</p>
-              <div className="tags" aria-label={`${project.name} tech stack`}>
-                {project.tech.map((tech) => (
-                  <span key={tech} className="tag">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              {project.highlights && (
-                <ul>
-                  {project.highlights.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              )}
-            </a>
-          ))}
-        </div>
-        </section>
-
-        <section>
         <h2>Work</h2>
         <div className="list">
           {work.map((item) => {
@@ -235,7 +177,7 @@ function App() {
               <>
                 <h3>{item.title}</h3>
                 <p className="muted">{item.period}</p>
-                <p>{item.description}</p>
+                {item.description && <p>{item.description}</p>}
                 {item.tech && (
                   <div className="tags" aria-label={`${item.title} tech stack`}>
                     {item.tech.map((tech) => (
@@ -244,6 +186,13 @@ function App() {
                       </span>
                     ))}
                   </div>
+                )}
+                {item.highlights && (
+                  <ul>
+                    {item.highlights.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
                 )}
               </>
             )
