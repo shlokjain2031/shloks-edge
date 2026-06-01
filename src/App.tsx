@@ -27,7 +27,7 @@ const work: WorkItem[] = [
     description:
       'I own the infra the agents run on (~500k req/day), and the browser automation that sped up getting policy quotes back reliably from 1 day to 30 min. Also did sales.',
     href: 'https://www.somainsure.com/',
-    tech: ['Python', 'TypeScript', 'Supabase'],
+    tech: ['Python', 'TypeScript', 'Next.js', 'Supabase'],
   },
   {
     title: 'Pollu',
