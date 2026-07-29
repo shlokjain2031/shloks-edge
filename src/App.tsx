@@ -25,7 +25,7 @@ const work: WorkItem[] = [
     title: 'Engineering & Operations @ Soma Insurance (Accel backed)',
     period: "Mar '26 — Jul'26",
     description:
-      'I owned the infra, harness and data layers agents run on (~500k req/day), and also the workflow automations, one of which cut time to quote a policy from 1 day to 5s. Did sales.',
+      'Owned the infra, harness & data layers agents ran on (~500k req/day), and also the workflow automations, one of which cut time to quote a policy from 1 day to 5s. Did sales.',
     href: 'https://www.somainsure.com/',
     tech: ['Python', 'TypeScript', 'Next.js', 'Supabase'],
   },
