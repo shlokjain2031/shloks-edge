@@ -23,9 +23,9 @@ const emailAddress = 'jainshlok20@gmail.com'
 const work: WorkItem[] = [
   {
     title: 'Engineering & Operations @ Soma Insurance (Accel backed)',
-    period: "Jan '26 — Jul'26",
+    period: "Mar '26 — Jul'26",
     description:
-      'Owned the infra, harness and data layers ai agents ran on. Automated workflows across quoting, binding and servicing. Did sales.',
+      'Owned the infra, harness and data layers ai agents ran on. Automated workflows into mature products across quoting, binding and servicing. Did sales.',
     href: 'https://www.somainsure.com/',
     tech: ['Python', 'TypeScript', 'Next.js', 'Supabase'],
   },
